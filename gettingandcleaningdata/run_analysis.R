@@ -1,7 +1,12 @@
 ##run_analysis.R
 
 
-##Step 0. Reads the data
+##Step 0. Gets and reads the data
+##Download and unzip the data.
+d1 =download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",destfile = "UCI HAR Dataset.zip",method = "wget")
+unzip("UCI HAR Dataset.zip")
+
+##reads the data
 activity_labels = read.table("UCI HAR Dataset//activity_labels.txt")
 features = read.table("UCI HAR Dataset//features.txt")
 
